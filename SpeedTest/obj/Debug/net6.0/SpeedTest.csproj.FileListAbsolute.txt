@@ -1,0 +1,15 @@
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\bin\Debug\net6.0\SpeedTest.exe
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\bin\Debug\net6.0\SpeedTest.deps.json
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\bin\Debug\net6.0\SpeedTest.runtimeconfig.json
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\bin\Debug\net6.0\SpeedTest.dll
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\bin\Debug\net6.0\SpeedTest.pdb
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.csproj.AssemblyReference.cache
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.GeneratedMSBuildEditorConfig.editorconfig
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.AssemblyInfoInputs.cache
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.AssemblyInfo.cs
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.csproj.CoreCompileInputs.cache
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.dll
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\refint\SpeedTest.dll
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.pdb
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\SpeedTest.genruntimeconfig.cache
+H:\П50-4-22\Программирование\C#\SpeedTest\SpeedTest\obj\Debug\net6.0\ref\SpeedTest.dll

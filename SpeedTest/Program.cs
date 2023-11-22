@@ -11,14 +11,14 @@ namespace SpeedTest
     {
         public class UserData
         {
-            public string Name;
-            public int CharactersPerMinute;
-            public int CharactersPerSecond;
+            public string Name { get; set; }
+            public int CharactersPerMinute { get; set; }
+            public int CharactersPerSecond { get; set; }
         }
 
         public static class LeaderboardManager
         {
-            private const string LeaderboardFilePath = "leaderboard.json";
+            private const string LeaderboardFilePath = "H:\\П50-4-22\\Программирование\\C#\\SpeedTest\\leaderboard.json";
 
             public static List<UserData> LoadLeaderboard()
             {
@@ -101,63 +101,71 @@ namespace SpeedTest
         }
         static void Main(string[] args)
         {
+            while (true)
+            {
             string text = "У лукоморья дуб зелёный;Златая цепь на дубе том: И днём и ночью кот учёный Всё ходит по цепи кругом; Идёт направо — песнь заводит,Налево — сказку говорит.";
             Console.WriteLine(text);
             Console.WriteLine("\nНажмите Enter для продолжения");
 
             ConsoleKeyInfo key = Console.ReadKey();
 
-    while (true) { 
-            if (key.Key == ConsoleKey.Enter)
-            {
-                Console.WriteLine("Enter your name");
-                string userName = Console.ReadLine();
+           
 
-                Stopwatch stopwatch = Stopwatch.StartNew();
-                Thread thread = new Thread(Writetext.text);
-                
-               
-                Console.SetCursorPosition(0, 4);
-                thread.Start();
-                Console.Clear();
-
-                while (true)
+                if (key.Key == ConsoleKey.Enter)
                 {
-                    Console.SetCursorPosition(0, 4);
-                    Console.CursorVisible = false;
-                    Console.ForegroundColor = ConsoleColor.White;
-                    TimeSpan ts = stopwatch.Elapsed;
-                
-                    int timer = 59 - ts.Seconds;
-                    Console.Write(timer + " ");
-                    Console.Write(ts.Minutes);
-                    Console.SetCursorPosition(0, 3);
-                    Console.Write("Ваш ввод ");
-                    
+                    int timer = 59;
+                    Console.WriteLine("Enter your name");
+                    string userName = Console.ReadLine();
 
-                    if (ts.Minutes >= 1)
+                    Stopwatch stopwatch = Stopwatch.StartNew();
+                    Thread thread = new Thread(Writetext.text);
+
+
+                    Console.SetCursorPosition(0, 4);
+                    thread.Start();
+                    Console.Clear();
+
+                    while (true)
                     {
-                        break;
+                        Console.SetCursorPosition(0, 4);
+                        Console.CursorVisible = false;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        TimeSpan ts = stopwatch.Elapsed;
+
+                        timer = 59 - ts.Seconds;
+                        Console.Write(timer + " ");
+                        //Console.Write(ts.Minutes);
+                        Console.SetCursorPosition(0, 3);
+                        Console.Write("Ваш ввод ");
+                        Thread.Sleep(100);
+                       
+                        
+                        if (ts.Minutes >= 1)
+                        {
+                          
+                            break;
+                        }
+
                     }
 
+                    Console.Clear();
+
+                    int totalCharacters = text.Length;
+                    int charactersTyped = text.Length;
+                    double charactersPerMinute = charactersTyped / 1;
+                    double charactersPerSecond = charactersTyped / 60;
+                    UserData userData = new UserData
+                    {
+                        Name = userName,
+                        CharactersPerMinute = (int)charactersPerMinute,
+                        CharactersPerSecond = (int)charactersPerSecond
+                    };
+
+                    LeaderboardManager.DisplayLeaderboard(new List<UserData> { userData });
+                    LeaderboardManager.DisplayLeaderboard(new List<UserData> { userData });
+                    LeaderboardManager.UpdateLeaderboard(userData, LeaderboardManager.LoadLeaderboard());
+
                 }
-                Console.Clear();
-
-                int totalCharacters = text.Length;
-                int charactersTyped = text.Length;
-                double charactersPerMinute = charactersTyped / 1;
-                double charactersPerSecond = charactersTyped / 60;
-                UserData userData = new UserData
-                {
-                    Name = userName,
-                    CharactersPerMinute = (int)charactersPerMinute,
-                    CharactersPerSecond = (int)charactersPerSecond
-                };
-
-                LeaderboardManager.DisplayLeaderboard(new List<UserData> { userData}); 
-                LeaderboardManager.DisplayLeaderboard(new List<UserData> { userData}); 
-                LeaderboardManager.UpdateLeaderboard(userData, LeaderboardManager.LoadLeaderboard());
-            }
             }
            
 
